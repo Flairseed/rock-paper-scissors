@@ -54,17 +54,17 @@ function game () {
       playerScore--;
     }
     else if (endStirng.includes("tied")) {
-      playerScore -= 0.5
+      playerScore -= 0.5;
     }
   }
-  const tieScore = playerScore/2
+  const tieScore = playerScore/2;
   if (playerScore > tieScore) {
-    console.log(`You win with a score of ${playerScore}!`)
+    console.log(`You win with a score of ${playerScore}!`);
   }
   else if (playerScore < tieScore) {
-    console.log(`You lose with a score of ${playerScore}!`)
+    console.log(`You lose with a score of ${playerScore}!`);
   }
   else {
-    console.log(`You tied with a score of ${playerScore}!`)
+    console.log(`You tied with a score of ${playerScore}!`);
   }
 }
