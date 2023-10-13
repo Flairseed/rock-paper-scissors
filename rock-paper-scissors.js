@@ -49,5 +49,6 @@ function game () {
   for (let i = 0; i < 5; i++) {
     computerSelection = getComputerChoice();
     playerSelection = prompt("Rock, Paper or Scissors?");
+    let endStirng = playRound(playerSelection, computerSelection);
   }
 }
