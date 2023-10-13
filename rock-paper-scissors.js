@@ -12,30 +12,30 @@ function getComputerChoice () {
 function playRound (playerSelection, computerSelection) {
   let endString = "Invalid input so you lose!";
   if (playerSelection === computerSelection) {
-    endString = `You tied! You both chose ${computerSelection}!`
+    endString = `You tied! You both chose ${computerSelection}!`;
   }
   else if (playerSelection === "Rock") {
     if (computerSelection === "Paper") {
-      endString = "You lose! Paper beats Rock!"
+      endString = "You lose! Paper beats Rock!";
     }
     else if (computerSelection === "Scissors") {
-      endString = "You win! Rock beats Scissors!"
+      endString = "You win! Rock beats Scissors!";
     }
   }
   else if (playerSelection === "Paper") {
     if (computerSelection === "Scissors") {
-      endString = "You lose! Scissors beats Paper!"
+      endString = "You lose! Scissors beats Paper!";
     }
     else if (computerSelection === "Rock") {
-      endString = "You win! Paper beats Rock!"
+      endString = "You win! Paper beats Rock!";
     }
   }
   else if (playerSelection === "Scissors") {
     if (computerSelection === "Rock") {
-      endString = "You lose! Rock beats Scissors!"
+      endString = "You lose! Rock beats Scissors!";
     }
     else if (computerSelection === "Paper") {
-      endString = "You win! Scissors beats Paper"
+      endString = "You win! Scissors beats Paper";
     }
   }
 }
