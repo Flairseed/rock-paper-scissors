@@ -41,7 +41,6 @@ function playRound (playerSelection, computerSelection) {
       endString = "You win! Scissors beats Paper";
     }
   }
-  console.log(endString)
   return endString;
 }
 
@@ -51,6 +50,7 @@ function game () {
     let computerSelection = getComputerChoice();
     let playerSelection = prompt("Rock, Paper or Scissors?");
     let endStirng = playRound(playerSelection, computerSelection);
+    console.log(endStirng)
     if (endStirng.includes("lose")) {
       playerScore--;
     }
