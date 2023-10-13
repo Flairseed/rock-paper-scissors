@@ -50,5 +50,11 @@ function game () {
     let computerSelection = getComputerChoice();
     let playerSelection = prompt("Rock, Paper or Scissors?");
     let endStirng = playRound(playerSelection, computerSelection);
+    if (endStirng.includes("lose")) {
+      playerScore--;
+    }
+    else if (endStirng.includes("tied")) {
+      playerScore -= 0.5
+    }
   }
 }
