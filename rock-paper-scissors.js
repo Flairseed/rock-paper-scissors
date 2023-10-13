@@ -15,10 +15,10 @@ function playRound (playerSelection, computerSelection) {
     endString = `You tied! You both chose ${computerSelection}!`
   }
   else if (playerSelection === "Rock") {
-    if (computerSelection == "Paper") {
+    if (computerSelection === "Paper") {
       endString = "You lose! Paper beats Rock!"
     }
-    else if (computerSelection == "Scissors") {
+    else if (computerSelection === "Scissors") {
       endString = "You win! Rock beats Scissors!"
     }
   }
