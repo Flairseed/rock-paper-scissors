@@ -46,6 +46,7 @@ function playRound (playerSelection, computerSelection) {
 
 function game () {
   let playerScore = 5;
+  const tieScore = playerScore/2;
   for (let i = 0; i < 5; i++) {
     let computerSelection = getComputerChoice();
     let playerSelection = prompt("Rock, Paper or Scissors?");
@@ -58,7 +59,6 @@ function game () {
       playerScore -= 0.5;
     }
   }
-  const tieScore = playerScore/2;
   if (playerScore > tieScore) {
     console.log(`You win with a score of ${playerScore}!`);
   }
