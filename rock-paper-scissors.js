@@ -22,4 +22,12 @@ function playRound (playerSelection, computerSelection) {
       endString = "You win! Rock beats Scissors!"
     }
   }
+  else if (playerSelection === "Paper") {
+    if (computerSelection === "Scissors") {
+      endString = "You lose! Scissors beats Paper!"
+    }
+    else if (computerSelection === "Rock") {
+      endString = "You win! Paper beats Rock!"
+    }
+  }
 }
