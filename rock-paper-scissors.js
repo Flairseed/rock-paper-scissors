@@ -9,3 +9,9 @@ function getComputerChoice () {
   return choice;
 }
 
+function playRound (playerSelection, computerSelection) {
+  let endString = "Invalid input so you lose!";
+  if (playerSelection === computerSelection) {
+    endString = `You tied! You both chose ${computerSelection}!`
+  }
+}
