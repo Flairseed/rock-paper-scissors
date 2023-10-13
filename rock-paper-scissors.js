@@ -47,8 +47,8 @@ function playRound (playerSelection, computerSelection) {
 function game () {
   let playerScore = 5;
   for (let i = 0; i < 5; i++) {
-    computerSelection = getComputerChoice();
-    playerSelection = prompt("Rock, Paper or Scissors?");
+    let computerSelection = getComputerChoice();
+    let playerSelection = prompt("Rock, Paper or Scissors?");
     let endStirng = playRound(playerSelection, computerSelection);
   }
 }
