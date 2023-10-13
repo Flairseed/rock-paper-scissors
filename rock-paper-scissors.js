@@ -58,4 +58,13 @@ function game () {
     }
   }
   const tieScore = playerScore/2
+  if (playerScore > tieScore) {
+    console.log(`You win with a score of ${playerScore}!`)
+  }
+  else if (playerScore < tieScore) {
+    console.log(`You lose with a score of ${playerScore}!`)
+  }
+  else {
+    console.log(`You tied with a score of ${playerScore}!`)
+  }
 }
