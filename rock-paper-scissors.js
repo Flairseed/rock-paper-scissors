@@ -57,4 +57,5 @@ function game () {
       playerScore -= 0.5
     }
   }
+  const tieScore = playerScore/2
 }
