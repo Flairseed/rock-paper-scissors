@@ -49,13 +49,14 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function game () {
+  const numberOfRounds = 5;
   /* 
   playerScore gets subtracted from hence it is the maximum points. tieScore
   however, will always be half of playerScore
   */
-  let playerScore = 5;
+  let playerScore = numberOfRounds;
   const tieScore = playerScore/2;
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < numberOfRounds; i++) {
     let computerSelection = getComputerChoice();
     let playerSelection = prompt("Rock, Paper or Scissors?");
     let endStirng = playRound(playerSelection, computerSelection);
