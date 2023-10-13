@@ -14,9 +14,11 @@ function playRound (playerSelection, computerSelection) {
   playerSelection = playerSelection[0].toUpperCase() + playerSelection.toLowerCase().slice(1);
   // tests all the cases and edits the endString
   let endString = "Invalid input so you lose!";
+  // simplest case is the tie case
   if (playerSelection === computerSelection) {
     endString = `You tied! You both chose ${computerSelection}!`;
   }
+  // player chooses Rock
   else if (playerSelection === "Rock") {
     if (computerSelection === "Paper") {
       endString = "You lose! Paper beats Rock!";
@@ -25,6 +27,7 @@ function playRound (playerSelection, computerSelection) {
       endString = "You win! Rock beats Scissors!";
     }
   }
+  // player chooses Paper
   else if (playerSelection === "Paper") {
     if (computerSelection === "Scissors") {
       endString = "You lose! Scissors beats Paper!";
@@ -33,6 +36,7 @@ function playRound (playerSelection, computerSelection) {
       endString = "You win! Paper beats Rock!";
     }
   }
+  // player chooses Scissors
   else if (playerSelection === "Scissors") {
     if (computerSelection === "Rock") {
       endString = "You lose! Rock beats Scissors!";
@@ -45,6 +49,10 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function game () {
+  /* 
+  playerScore gets subtracted from hence it is the maximum points. tieScore
+  however, will always be half of playerScore
+  */
   let playerScore = 5;
   const tieScore = playerScore/2;
   for (let i = 0; i < 5; i++) {
@@ -52,6 +60,7 @@ function game () {
     let playerSelection = prompt("Rock, Paper or Scissors?");
     let endStirng = playRound(playerSelection, computerSelection);
     console.log(endStirng);
+    // checks to see if the endString has a certain keyword
     if (endStirng.includes("lose")) {
       playerScore--;
     }
