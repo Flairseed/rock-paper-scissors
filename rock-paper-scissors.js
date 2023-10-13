@@ -41,6 +41,7 @@ function playRound (playerSelection, computerSelection) {
       endString = "You win! Scissors beats Paper";
     }
   }
+  console.log(endString)
   return endString;
 }
 
