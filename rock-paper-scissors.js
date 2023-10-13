@@ -10,6 +10,9 @@ function getComputerChoice () {
 }
 
 function playRound (playerSelection, computerSelection) {
+  // make sure only first letter is capitalised
+  playerSelection = playerSelection[0].toUpperCase() + playerSelection.toLowerCase().slice(1)
+  // tests all the cases and edits the endString
   let endString = "Invalid input so you lose!";
   if (playerSelection === computerSelection) {
     endString = `You tied! You both chose ${computerSelection}!`;
