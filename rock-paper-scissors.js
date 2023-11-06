@@ -65,7 +65,7 @@ function game () {
   function action (event) {
     let computerSelection = getComputerChoice();
     computerAction.innerText = computerSelection;
-    let actionButton = event.currentTarget;
+    let actionButton = event.target;
     let playerSelection = actionButton.innerText;
     let endStirng = playRound(playerSelection, computerSelection);
     console.log(endStirng);
