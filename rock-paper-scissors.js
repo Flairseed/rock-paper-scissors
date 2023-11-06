@@ -55,6 +55,11 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
+  let buttons = document.querySelectorAll("button")
+  for (button in buttons) {
+    pass;
+  }
+
   let computerSelection = getComputerChoice();
   let playerSelection = prompt("Rock, Paper or Scissors?");
   let endStirng = playRound(playerSelection, computerSelection);
