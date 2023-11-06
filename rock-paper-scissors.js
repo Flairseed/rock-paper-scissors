@@ -64,9 +64,9 @@ function game () {
 
   function action (event) {
     let computerSelection = getComputerChoice();
-    computerAction.innerHTML = computerSelection;
+    computerAction.innerText = computerSelection;
     let actionButton = event.currentTarget;
-    let playerSelection = actionButton.innerHtml;
+    let playerSelection = actionButton.innerText;
     let endStirng = playRound(playerSelection, computerSelection);
     console.log(endStirng);
     // checks to see if the endString has a certain keyword
@@ -76,7 +76,7 @@ function game () {
     else if (endStirng.includes("win")) {
       playerScore++;
     }
-    score.innerHTML = `player: ${playerScore} computer: ${computerScore}`;
+    score.innerText = `player: ${playerScore} computer: ${computerScore}`;
   }
 }
 
