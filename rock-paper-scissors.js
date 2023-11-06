@@ -61,10 +61,10 @@ function game () {
   console.log(endStirng);
   // checks to see if the endString has a certain keyword
   if (endStirng.includes("lose")) {
-    playerScore--;
+    computerScore++;
   }
-  else if (endStirng.includes("tied")) {
-    playerScore -= 0.5;
+  else if (endStirng.includes("win")) {
+    playerScore++;
   }
 }
 
