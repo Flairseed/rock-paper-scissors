@@ -53,8 +53,8 @@ function game () {
   playerScore gets subtracted from hence it is the maximum points. tieScore
   however, will always be half of playerScore
   */
-  let playerScore = numberOfRounds;
-  const tieScore = playerScore/2;
+  let playerScore = 0;
+  let computerScore = 0;
   let computerSelection = getComputerChoice();
   let playerSelection = prompt("Rock, Paper or Scissors?");
   let endStirng = playRound(playerSelection, computerSelection);
