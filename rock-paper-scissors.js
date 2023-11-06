@@ -55,13 +55,16 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
-  const buttons = document.querySelectorAll("button")
+  const score = document.querySelector(".results");
+  const computerAction = document.querySelector(".computer-selection");
+  const buttons = document.querySelectorAll("button");
   for (button in buttons) {
     pass;
   }
 
   function action (event) {
     let computerSelection = getComputerChoice();
+    computerAction.innerHTML = computerSelection;
     let actionButton = event.currentTarget;
     let playerSelection = actionButton.innerHtml;
     let endStirng = playRound(playerSelection, computerSelection);
@@ -73,6 +76,7 @@ function game () {
     else if (endStirng.includes("win")) {
       playerScore++;
     }
+    score.innerHTML = `player: ${playerScore} computer: ${computerScore}`;
   }
 }
 
