@@ -55,21 +55,24 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
-  let buttons = document.querySelectorAll("button")
+  const buttons = document.querySelectorAll("button")
   for (button in buttons) {
     pass;
   }
 
-  let computerSelection = getComputerChoice();
-  let playerSelection = prompt("Rock, Paper or Scissors?");
-  let endStirng = playRound(playerSelection, computerSelection);
-  console.log(endStirng);
-  // checks to see if the endString has a certain keyword
-  if (endStirng.includes("lose")) {
-    computerScore++;
-  }
-  else if (endStirng.includes("win")) {
-    playerScore++;
+  function action (event) {
+    let computerSelection = getComputerChoice();
+    let actionButton = event.currentTarget;
+    let playerSelection = actionButton.innerHtml;
+    let endStirng = playRound(playerSelection, computerSelection);
+    console.log(endStirng);
+    // checks to see if the endString has a certain keyword
+    if (endStirng.includes("lose")) {
+      computerScore++;
+    }
+    else if (endStirng.includes("win")) {
+      playerScore++;
+    }
   }
 }
 
