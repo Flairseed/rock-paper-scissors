@@ -49,34 +49,22 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function game () {
-  const numberOfRounds = 5;
   /* 
   playerScore gets subtracted from hence it is the maximum points. tieScore
   however, will always be half of playerScore
   */
   let playerScore = numberOfRounds;
   const tieScore = playerScore/2;
-  for (let i = 0; i < numberOfRounds; i++) {
-    let computerSelection = getComputerChoice();
-    let playerSelection = prompt("Rock, Paper or Scissors?");
-    let endStirng = playRound(playerSelection, computerSelection);
-    console.log(endStirng);
-    // checks to see if the endString has a certain keyword
-    if (endStirng.includes("lose")) {
-      playerScore--;
-    }
-    else if (endStirng.includes("tied")) {
-      playerScore -= 0.5;
-    }
+  let computerSelection = getComputerChoice();
+  let playerSelection = prompt("Rock, Paper or Scissors?");
+  let endStirng = playRound(playerSelection, computerSelection);
+  console.log(endStirng);
+  // checks to see if the endString has a certain keyword
+  if (endStirng.includes("lose")) {
+    playerScore--;
   }
-  if (playerScore > tieScore) {
-    console.log(`You win with a score of ${playerScore}!`);
-  }
-  else if (playerScore < tieScore) {
-    console.log(`You lose with a score of ${playerScore}!`);
-  }
-  else {
-    console.log(`You tied with a score of ${playerScore}!`);
+  else if (endStirng.includes("tied")) {
+    playerScore -= 0.5;
   }
 }
 
