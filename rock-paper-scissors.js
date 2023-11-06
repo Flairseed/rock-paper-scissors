@@ -55,9 +55,6 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
-  const score = document.querySelector(".results");
-  const computerAction = document.querySelector(".computer-selection");
-  const buttons = document.querySelectorAll("button");
   for (button in buttons) {
     addEventListener("click", action);
   }
@@ -80,4 +77,7 @@ function game () {
   }
 }
 
+const score = document.querySelector(".results");
+const computerAction = document.querySelector(".computer-selection");
+const buttons = document.querySelectorAll("button");
 game();
