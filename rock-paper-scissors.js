@@ -59,7 +59,7 @@ function game () {
   const computerAction = document.querySelector(".computer-selection");
   const buttons = document.querySelectorAll("button");
   for (button in buttons) {
-    pass;
+    addEventListener("click", action);
   }
 
   function action (event) {
