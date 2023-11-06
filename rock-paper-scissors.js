@@ -55,8 +55,8 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
-  for (button in buttons) {
-    addEventListener("click", action);
+  for (button of buttons) {
+    button.addEventListener("click", action);
   }
 
   function action (event) {
