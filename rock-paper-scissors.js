@@ -74,7 +74,7 @@ function game () {
       playerScore++;
     }
     score.innerText = `player: ${playerScore} computer: ${computerScore}`;
-    if (playerScore >= 5 || computerScore >= 5) {
+    if (playerScore == 5 || computerScore == 5) {
       for (button of buttons) {
         button.removeEventListener("click", action);
       }
