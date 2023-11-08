@@ -14,6 +14,17 @@ button {
   width: 25%;
 }
 
+.computer-selection img {
+  width: 100%;
+}
+
+.computer-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
