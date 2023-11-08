@@ -59,11 +59,21 @@ function game () {
     button.addEventListener("click", action);
   }
 
+  function updateDisplay (playerScore, computerScore, computerImage, computerText, showAttribution) {
+    playerScoreNumber.innerText = playerScore;
+    computerScoreNumber.innerText = computerScore;
+    computerAction.innerText = computerText;
+    computerActionImage.setAttribute("src", computerImage);
+    if (showAttribution) {
+      attributionLink.style.display = "inline";
+    }
+    else {
+      attributionLink.style.display = "none";
+    }
+  }
+
   function action (event) {
     const computerSelection = getComputerChoice();
-    computerAction.innerText = computerSelection[0];
-    computerActionImage.setAttribute("src", computerSelection[1])
-    attributionLink.style.display = "none"
     const actionButton = event.currentTarget;
     const playerSelection = actionButton.innerText;
     const endStirng = playRound(playerSelection, computerSelection[0]);
@@ -75,8 +85,7 @@ function game () {
     else if (endStirng.includes("win")) {
       playerScore++;
     }
-    playerScoreNumber.innerText = playerScore;
-    computerScoreNumber.innerText = computerScore;
+    updateDisplay(playerScore, computerScore, computerSelection[1], computerSelection[0], false);
     if (playerScore == 5 || computerScore == 5) {
       for (const button of buttons) {
         button.removeEventListener("click", action);
