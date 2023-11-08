@@ -58,7 +58,7 @@ function game () {
   for (const button of buttons) {
     button.addEventListener("click", action);
   }
-  updateDisplay(playerScore, computerScore, "./images/denied.png", "None", True);
+  updateDisplay(playerScore, computerScore, "./images/denied.png", "None", true);
 
   function updateDisplay (playerScore, computerScore, computerImage, computerText, showAttribution) {
     playerScoreNumber.innerText = playerScore;
