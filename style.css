@@ -37,12 +37,18 @@ button img {
   flex-wrap: wrap;
 }
 
-.header {
+.header, .footer {
   text-align: center;
   padding: 50px;
   font-size:xx-large;
   background-color: rgb(43, 55, 95);
   color: white;
+}
+
+.footer {
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 100px;
 }
 
 .score {
