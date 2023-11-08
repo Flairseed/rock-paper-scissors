@@ -27,3 +27,11 @@ button {
   background-color: rgb(43, 55, 95);
   color: white;
 }
+
+.score {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  font-size: x-large;
+  background-color: lightblue;
+}
