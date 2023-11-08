@@ -81,14 +81,36 @@ function game () {
       for (const button of buttons) {
         button.removeEventListener("click", action);
       }
+      addRestartButton()
     }
+  }
+
+  function addRestartButton () {
+    let finalResultText = "YOU LOST!😭";
+    if (playerScore > computerScore) {
+      finalResultText = "YOU WON!🙀";
+    }
+    const finalResult = document.createElement("div");
+    finalResult.innerText = finalResultText;
+    finalResult.style.fontSize = "xx-large";
+    finalResult.style.textAlign = "center";
+    finalResult.style.marginTop = "20px";
+    const restartButton = document.createElement("button");
+    restartButton.style.display = "block";
+    restartButton.style.margin = "20px auto";
+    restartButton.innerText = "Restart";
+    restartButton.style.padding = "10px";
+    restartButton.style.fontSize = "xx-large";
+    finalResult.appendChild(restartButton);
+    body.appendChild(finalResult);
   }
 }
 
+const body = document.querySelector(".body")
 const playerScoreNumber = document.querySelector(".player-score-number");
 const computerScoreNumber = document.querySelector(".computer-score-number");
 const computerAction = document.querySelector(".computer-selection-name");
-const computerActionImage = document.querySelector(".computer-selection img")
+const computerActionImage = document.querySelector(".computer-selection img");
 const attributionLink = document.querySelector(".computer-selection a")
 const buttons = document.querySelectorAll("button");
 game();
