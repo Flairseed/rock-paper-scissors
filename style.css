@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: rgb(179, 204, 212);
+  background-color: lightblue;
 }
 
 button img {
@@ -46,5 +46,5 @@ button {
   justify-content: space-around;
   padding: 50px;
   font-size: x-large;
-  background-color: lightblue;
+  background-color: rgb(179, 204, 212);
 }
