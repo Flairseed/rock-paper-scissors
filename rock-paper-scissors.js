@@ -55,17 +55,17 @@ function game () {
   */
   let playerScore = 0;
   let computerScore = 0;
-  for (button of buttons) {
+  for (const button of buttons) {
     button.addEventListener("click", action);
   }
 
   function action (event) {
-    let computerSelection = getComputerChoice();
+    const computerSelection = getComputerChoice();
     computerAction.innerText = computerSelection[0];
     computerActionImage.setAttribute("src", computerSelection[1])
-    let actionButton = event.currentTarget;
-    let playerSelection = actionButton.innerText;
-    let endStirng = playRound(playerSelection, computerSelection[0]);
+    const actionButton = event.currentTarget;
+    const playerSelection = actionButton.innerText;
+    const endStirng = playRound(playerSelection, computerSelection[0]);
     console.log(endStirng);
     // checks to see if the endString has a certain keyword
     if (endStirng.includes("lose")) {
@@ -77,7 +77,7 @@ function game () {
     playerScoreNumber.innerText = playerScore;
     computerScoreNumber.innerText = computerScore;
     if (playerScore == 5 || computerScore == 5) {
-      for (button of buttons) {
+      for (const button of buttons) {
         button.removeEventListener("click", action);
       }
     }
