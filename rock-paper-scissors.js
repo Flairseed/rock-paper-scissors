@@ -89,7 +89,7 @@ function game () {
       for (const button of buttons) {
         button.removeEventListener("click", action);
       }
-      addRestartButton()
+      addRestartButton();
     }
   }
 
@@ -110,7 +110,7 @@ function game () {
     restartButton.style.padding = "10px";
     restartButton.style.fontSize = "xx-large";
     restartButton.addEventListener("click", function (event) {
-      restart(finalResult)
+      restart(finalResult);
     });
     finalResult.appendChild(restartButton);
     body.appendChild(finalResult);
@@ -122,11 +122,11 @@ function game () {
   }
 }
 
-const body = document.querySelector(".body")
+const body = document.querySelector(".body");
 const playerScoreNumber = document.querySelector(".player-score-number");
 const computerScoreNumber = document.querySelector(".computer-score-number");
 const computerAction = document.querySelector(".computer-selection-name");
 const computerActionImage = document.querySelector(".computer-selection img");
-const attributionLink = document.querySelector(".computer-selection a")
+const attributionLink = document.querySelector(".computer-selection a");
 const buttons = document.querySelectorAll("button");
 game();
