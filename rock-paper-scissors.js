@@ -1,4 +1,4 @@
-const choices = [["Rock", "./images/rock"], ["Paper", "./images/paper"], ["Scissors", "./images/scissors"]];
+const choices = [["Rock", "./images/rock.png"], ["Paper", "./images/paper.png"], ["Scissors", "./images/scissors.png"]];
 
 function getComputerChoice () {
   // find a random index
@@ -62,6 +62,7 @@ function game () {
   function action (event) {
     let computerSelection = getComputerChoice();
     computerAction.innerText = computerSelection[0];
+    computerActionImage.setAttribute("src", computerSelection[1])
     let actionButton = event.currentTarget;
     let playerSelection = actionButton.innerText;
     let endStirng = playRound(playerSelection, computerSelection[0]);
@@ -86,5 +87,6 @@ function game () {
 const playerScoreNumber = document.querySelector(".player-score-number");
 const computerScoreNumber = document.querySelector(".computer-score-number");
 const computerAction = document.querySelector(".computer-selection-name");
+const computerActionImage = document.querySelector(".computer-selection img")
 const buttons = document.querySelectorAll("button");
 game();
