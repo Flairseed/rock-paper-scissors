@@ -62,7 +62,7 @@ function game () {
   function action (event) {
     let computerSelection = getComputerChoice();
     computerAction.innerText = computerSelection;
-    let actionButton = event.target;
+    let actionButton = event.currentTarget;
     let playerSelection = actionButton.innerText;
     let endStirng = playRound(playerSelection, computerSelection);
     console.log(endStirng);
@@ -73,7 +73,8 @@ function game () {
     else if (endStirng.includes("win")) {
       playerScore++;
     }
-    score.innerText = `player: ${playerScore} computer: ${computerScore}`;
+    playerScoreNumber.innerText = playerScore;
+    computerScoreNumber.innerText = computerScore;
     if (playerScore == 5 || computerScore == 5) {
       for (button of buttons) {
         button.removeEventListener("click", action);
@@ -82,7 +83,8 @@ function game () {
   }
 }
 
-const score = document.querySelector(".results");
+const playerScoreNumber = document.querySelector(".player-score-number");
+const computerScoreNumber = document.querySelector(".computer-score-number");
 const computerAction = document.querySelector(".computer-selection");
 const buttons = document.querySelectorAll("button");
 game();
