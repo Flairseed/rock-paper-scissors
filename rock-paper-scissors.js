@@ -63,6 +63,7 @@ function game () {
     const computerSelection = getComputerChoice();
     computerAction.innerText = computerSelection[0];
     computerActionImage.setAttribute("src", computerSelection[1])
+    attributionLink.style.display = "none"
     const actionButton = event.currentTarget;
     const playerSelection = actionButton.innerText;
     const endStirng = playRound(playerSelection, computerSelection[0]);
@@ -88,5 +89,6 @@ const playerScoreNumber = document.querySelector(".player-score-number");
 const computerScoreNumber = document.querySelector(".computer-score-number");
 const computerAction = document.querySelector(".computer-selection-name");
 const computerActionImage = document.querySelector(".computer-selection img")
+const attributionLink = document.querySelector(".computer-selection a")
 const buttons = document.querySelectorAll("button");
 game();
