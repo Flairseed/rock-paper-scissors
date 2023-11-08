@@ -1,4 +1,4 @@
-const choices = ["Rock", "Paper", "Scissors"]
+const choices = [["Rock", "./images/rock"], ["Paper", "./images/paper"], ["Scissors", "./images/scissors"]];
 
 function getComputerChoice () {
   // find a random index
@@ -61,10 +61,10 @@ function game () {
 
   function action (event) {
     let computerSelection = getComputerChoice();
-    computerAction.innerText = computerSelection;
+    computerAction.innerText = computerSelection[0];
     let actionButton = event.currentTarget;
     let playerSelection = actionButton.innerText;
-    let endStirng = playRound(playerSelection, computerSelection);
+    let endStirng = playRound(playerSelection, computerSelection[0]);
     console.log(endStirng);
     // checks to see if the endString has a certain keyword
     if (endStirng.includes("lose")) {
