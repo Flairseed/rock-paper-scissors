@@ -101,8 +101,16 @@ function game () {
     restartButton.innerText = "Restart";
     restartButton.style.padding = "10px";
     restartButton.style.fontSize = "xx-large";
+    restartButton.addEventListener("click", function (event) {
+      restart(finalResult)
+    });
     finalResult.appendChild(restartButton);
     body.appendChild(finalResult);
+
+    function restart (restartDiv) {
+      restartDiv.remove();
+      game();
+    }
   }
 }
 
