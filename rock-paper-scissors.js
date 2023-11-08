@@ -85,6 +85,6 @@ function game () {
 
 const playerScoreNumber = document.querySelector(".player-score-number");
 const computerScoreNumber = document.querySelector(".computer-score-number");
-const computerAction = document.querySelector(".computer-selection");
+const computerAction = document.querySelector(".computer-selection-name");
 const buttons = document.querySelectorAll("button");
 game();
