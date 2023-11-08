@@ -49,10 +49,6 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function game () {
-  /* 
-  playerScore gets subtracted from hence it is the maximum points. tieScore
-  however, will always be half of playerScore
-  */
   let playerScore = 0;
   let computerScore = 0;
   for (const button of buttons) {
@@ -65,6 +61,7 @@ function game () {
     computerScoreNumber.innerText = computerScore;
     computerAction.innerText = computerText;
     computerActionImage.setAttribute("src", computerImage);
+    // only display attribution like if true
     if (showAttribution) {
       attributionLink.style.display = "inline";
     }
@@ -87,6 +84,7 @@ function game () {
       playerScore++;
     }
     updateDisplay(playerScore, computerScore, computerSelection[1], computerSelection[0], false);
+    // if game end condition is met then the event listeners are removed
     if (playerScore == 5 || computerScore == 5) {
       for (const button of buttons) {
         button.removeEventListener("click", action);
